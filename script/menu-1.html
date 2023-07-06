@@ -81,9 +81,6 @@
         }
 
         /* nav */
-        .nav {
-            
-        }
         .nav > ul {
             display: flex;
             justify-content: right;
@@ -121,12 +118,12 @@
         }
 
         /* Vanila Javascript CSS */
-        .nav > ul > li > ul {
+        /* .nav > ul > li > ul {
             display: block;
             height: 0;
             overflow: hidden;
             transition: all 600ms;
-        }
+        } */
     </style>
 </head>
 <body>
@@ -198,31 +195,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         // jquery
-        // $(document).ready(function() {
-        //     // 메뉴에 오버했을 때 자식 메뉴를 보여줌
-        //     $(".nav > ul > li").on("mouseover", function() {
-        //         $(this).find(".submenu").stop().slideDown(200);
-        //     });
-        //     $(".nav > ul > li").on("mouseout", function() {
-        //         $(this).find(".submenu").stop().slideUp(200);
-        //     });
-        // });
+        $(document).ready(function() {
+            // 메뉴에 오버했을 때 자식 메뉴를 보여줌
+            $(".nav > ul > li").on("mouseover", function() {
+                $(this).find(".submenu").stop().slideDown(200);
+            });
+            $(".nav > ul > li").on("mouseout", function() {
+                $(this).find(".submenu").stop().slideUp(200);
+            });
+        });
 
         // javascript
-        window.onload = function(){
-            let navList = document.querySelectorAll(".nav > ul > li");
+        // window.onload = function(){
+        //     let navList = document.querySelectorAll(".nav > ul > li");
 
-            navList.forEach(function(navItem) {
-                navItem.addEventListener("mouseover", function() {
-                    this.querySelector(".submenu").style.height = "125px";
-                });
-            });
-            navList.forEach(function(navItem){
-                navItem.addEventListener("mouseout", function(){
-                    this.querySelector(".submenu").style.height = "0px";
-                });
-            });
-        };
+        //     navList.forEach(function(navItem) {
+        //         navItem.addEventListener("mouseover", function() {
+        //             this.querySelector(".submenu").style.height = "125px";
+        //         });
+        //     });
+        //     navList.forEach(function(navItem){
+        //         navItem.addEventListener("mouseout", function(){
+        //             this.querySelector(".submenu").style.height = "0px";
+        //         });
+        //     });
+        // };
     </script>
 </body>
 </html>
