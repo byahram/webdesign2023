@@ -92,6 +92,7 @@
             left: 0;
             top: 100px;
             z-index: 1;
+            transition: all 400ms;
         }
         #header.on::after {
             height: 124px;
@@ -133,6 +134,14 @@
         .nav > ul > li > ul > li > a:hover {
             background-color: #8f8f8f;
         }
+
+        /* 자바스크립트용 CSS */
+        /* .nav > ul > li > ul {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: all 400ms;
+        } */
     </style>
 </head>
 <body>
@@ -207,16 +216,32 @@
         //jquery
         $(document).ready(function() {
             $(".nav > ul > li").on("mouseover", function() {
-                $(".nav > ul > li > ul").stop().slideDown();
+                $(".nav > ul > li > ul").stop().slideDown(600);
                 $("#header").addClass("on");
             });
 
             $(".nav > ul > li").on("mouseleave", function() {
-
+                $(".nav > ul > li > ul").stop().slideUp(200);
+                $("#header").removeClass("on");
             });
         });
 
+        //javascript
+        // let navList = document.querySelector(".nav > ul");
 
+        // navList.addEventListener("mouseover", () => {
+        //     navList.querySelectorAll(".submenu").forEach(sub => {
+        //         sub.style.height = "155px";
+        //     });
+        //     document.getElementById("header").classList.add("on");
+        // });
+
+        // navList.addEventListener("mouseout", () => {
+        //     navList.querySelectorAll(".submenu").forEach(sub => {
+        //         sub.style.height = "0px";
+        //     });
+        //     document.getElementById("header").classList.remove("on");
+        // });
     </script>
 </body>
 </html>
