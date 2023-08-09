@@ -8,9 +8,24 @@ li {list-style: none;}
 button {cursor: pointer;}
 table {border-collapse: collapse; border: 1px solid #ccc; width: 100%;}
 body {background: #fff; background-color: #fff; color: #333;}
+#wrap {width: 1200px; margin: 0 auto;}
 
 /* header */
-#header {width: 1200px; height: 100px;}
-#slider {}
-#contents {}
-#footer {}
+#header {width: 100%; height: 100px; display: flex;}
+#header .logo {width: 20%; height: 100%; background-color: red;}
+#header .menu {width: 80%; height: 100%; background-color: orange;}
+
+/* slider */
+#slider {width: 100%; height: 300px; background-color: yellow;}
+
+/* contents */
+#contents {width: 100%; height: 200px; display: flex;}
+#contents .content1 {width: 33.33%; height: 100%; background-color: green;}
+#contents .content2 {width: 33.33%; height: 100%; background-color: blue;}
+#contents .content3 {width: 33.33%; height: 100%; background-color: purple;}
+
+/* footer */
+#footer {width: 100%; height: 100px; display: flex;}
+#footer .logo {width: 20%; height: 100%; background-color: red;}
+#footer .copy {width: 60%; height: 100%; background-color: orange;}
+#footer .sns {width: 20%; height: 100%; background-color: yellow;}
