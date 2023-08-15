@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* reset */
+* {padding: 0; margin: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: #333; display: block;}
+img {vertical-align: top; width: 100%;}
+
+/* common */
+#wrap {width: 100%; height: 750px;}
+h2 {display: none; opacity: 0;}
+
+/* header */
+#header {width: 200px; height: 650px; float: left; background-color: rgb(241, 241, 195);}
+#header .logo {width: 100%; height: 100px;}
+#header .logo a {display: flex; height: 100%; align-items: center; justify-content: center;}
+
+#header .nav {width: 100%; height: 100%;}
+#header .nav > ul > li > a {padding: 10px 0; text-align: center; background-color: rgb(212, 212, 113);}
+#header .nav > ul > li > a:hover {background-color: rgb(168, 168, 76);}
+#header .nav > ul > li > ul {display: none;}
+#header .nav > ul > li > ul > li > a {padding: 10px 0; text-align: center; background-color: rgb(194, 194, 158);}
+#header .nav > ul > li > ul > li > a:hover {background-color: rgb(151, 151, 123);}
+
+/* main */
+#main {width: calc(100% - 200px); height: 650px; float: left;}
+#slider {width: 100%; height: 400px; display: flex; overflow: hidden;}
+#slider .slider__wrap {width: calc(100% - 230px); height: 100%;}
+#slider .slider__wrap .slide {background-position: center; background-size: cover; width: 100%; height: 100%; align-items: end; display: flex; position: relative;}
+#slider .slider__wrap .slide.s1 {background-image: url(../images/slider01.jpg);}
+#slider .slider__wrap .slide.s2 {background-image: url(../images/slider02.jpg);}
+#slider .slider__wrap .slide.s3 {background-image: url(../images/slider03.jpg);}
+#slider .slider__wrap .slide .txt {position: absolute; bottom: 0; left: 0; width: 100%; background-color: rgba(179, 179, 85, 0.5); padding: 10px; color: #fff;}
+#slider .slider__wrap .slide .txt p:first-child {font-size: 20px; font-weight: 600;}
+#slider .slider__wrap .slide .txt p:last-child {margin-top: 8px;}
+
+#slider .banner {width: 230px; position: relative;}
+#slider .banner .banner__cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; display: flex; flex-direction: column; align-items: center;}
+#slider .banner .banner__cont .cont_title {font-size: 30px; font-weight: 400; color: #fff;}
+#slider .banner .banner__cont .cont_title span {color: yellow; font-size: 30px; font-weight: 600;}
+#slider .banner .banner__cont .cont_btn {margin-top: 12px;}
+#slider .banner .banner__cont .cont_btn a {padding: 10px 20px; background-color: #fff; border-radius: 70px;}
+
+#contents {display: flex; height: 250px; background-color: rgb(223, 201, 162);}
+#contents .content1 {width: 50%; padding: 10px;}
+#contents .content1 .c1_tit ul {display: flex;}
+#contents .content1 .c1_tit ul li.active a {background-color: rgb(173, 151, 121); text-decoration: underline;}
+#contents .content1 .c1_tit ul a {padding: 5px 10px; background-color: rgb(250, 215, 170);}
+#contents .content1 .c1_cont {background-color: #33333349; padding: 5px;}
+#contents .content1 .c1_cont .notice ul li {display: flex; justify-content: space-between;}
+#contents .content1 .c1_cont .notice ul li a {line-height: 1.8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#contents .content1 .c1_cont .gallery ul {display: flex; justify-content: space-between;}
+#contents .content1 .c1_cont .gallery ul li {width: 30%;}
+
+#contents .content2 {width: 50%; background-color: rgb(230, 221, 207); padding: 15px;}
+#contents .content2 .gallery_tit {border-bottom: 1px solid #333; padding-bottom: 6px;}
+#contents .content2 .gallery_cont {margin-top: 16px;}
+#contents .content2 .gallery_cont ul {display: flex; justify-content: space-between;}
+#contents .content2 .gallery_cont ul li {width: 30%;}
+
+/* footer */
+#footer {width: 100%; height: 100px; background-color: rgb(191, 219, 191); display: flex;}
+#footer .logo {width: 200px; display: flex; align-items: center; justify-content: center;}
+#footer .copywrite {width: 60%; display: flex; flex-direction: column; align-items: start; justify-content: center; margin-left: 20px;}
+#footer .family {width: 20%; display: flex; align-items: center; justify-content: center;}
+#footer .family select {padding: 5px 20px;}
+
+/* popup */
